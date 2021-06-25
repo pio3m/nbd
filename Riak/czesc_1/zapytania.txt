@@ -1,0 +1,108 @@
+# Zapytania 1
+
+curl -XPUT -H "Content-Type: application/json" -d 
+'{
+    "language": "PHP",
+    "like": 0,
+    "years": 11,
+    "score": 9.0
+}'  
+http://localhost:8098/buckets/s23786/keys/php
+
+curl -XPUT -H "Content-Type: application/json" -d 
+'{
+    "language": "C#",
+    "like": 1,
+    "years": 5,
+    "score": 10.0
+}'  
+http://localhost:8098/buckets/s23786/keys/c#
+
+curl -XPUT -H "Content-Type: application/json" -d 
+'{
+    "language": "ruby",
+    "like": 1,
+    "years": 2,
+    "score": 9.5
+}'  
+http://localhost:8098/buckets/s23786/keys/ruby
+
+curl -XPUT -H "Content-Type: application/json" -d 
+'{
+    "language": "js",
+    "like": 0,
+    "years": 5,
+    "score": 7.0
+}'  
+http://localhost:8098/buckets/s23786/keys/js
+
+curl -XPUT -H "Content-Type: application/json" -d 
+'{
+    "language": "scala",
+    "like": 1,
+    "years": 0,
+    "score": 3.0
+}'  
+http://localhost:8098/buckets/s23786/keys/scala
+
+# zapytanie 2
+
+ curl http://localhost:8098/buckets/s23786/keys/scala
+
+# zapytanie 3
+
+curl -XPUT -H "Content-Type: application/json" -i -d 
+'{
+    "language": "scala",
+    "like": 1,
+    "years": 0,
+    "score": 3.0,
+    "desc": "lepsza wersja javy"
+}'  
+http://localhost:8098/buckets/s23786/keys/scala
+
+# zapytanie 4
+
+curl -i -XPUT -H "Content-Type: application/json" -d 
+'{
+    "like": 0,
+    "years": 11,
+    "score": 9.0
+}'  
+http://localhost:8098/buckets/s23786/keys/php?returnbody=true
+
+# zapytanie 5
+
+curl -i -XPUT -H "Content-Type: application/json" -d 
+'{
+    "like": 0,
+    "years": 11,
+    "score": 3.0
+}'  
+http://localhost:8098/buckets/s23786/keys/php?returnbody=true
+
+# zapytanie 6
+
+curl -i -XDELETE http://localhost:8098/buckets/s23786/keys/php?returnbody=true
+
+# zapytanie 7
+
+curl http://localhost:8098/buckets/s23786/keys/php?returnbody=true
+
+
+# zapytanie 8
+
+curl -i -XPOST -H "Content-Type: application/json" -d 
+'{
+    "cos": "tam",
+}'  
+http://localhost:8098/buckets/s23786/keys
+
+# zapytanie 9
+
+curl http://localhost:8098/buckets/s23786/keys/Rte3hNU7vW3QNoNOjMEUNpVtYyG
+
+
+# zapytanie 10
+
+curl -i -XDELETE http://localhost:8098/buckets/s23786/keys/Rte3hNU7vW3QNoNOjMEUNpVtYyG

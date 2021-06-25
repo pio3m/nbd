@@ -1,0 +1,23 @@
+Zapytanie 1
+MATCH (movie:Movie) Return movie
+
+Zapytanie 2. 
+MATCH (FilmyHW)<- [:ACTED_IN]-(aktor:Person {name: "Hugo Weaving"}) RETURN aktor,FilmyHW
+
+Zapytanie 3. 
+MATCH (rezyser:Person) - [:DIRECTED] - (FilmyHW) <- [:ACTED_IN]-(aktor:Person {name: "Hugo Weaving"}) RETURN rezyser, aktor, FilmyHW
+
+Zapytanie 4. 
+MATCH (innyAktor:Person) - [:ACTED_IN] - (FilmyHW) <- [:ACTED_IN]-(aktor:Person {name: "Hugo Weaving"}) RETURN innyAktor, aktor, FilmyHW 
+
+Zapytanie 5. 
+MATCH (matrix:Movie) <-[ACTED_IN] - (:Person) - [:ACTED_IN] ->(film:Movie) WHERE matrix.title CONTAINS 'Matrix' RETURN film
+
+Zapytanie 6. 
+MATCH (filmy:Movie)<-[:ACTED_IN]-(aktorzy:Person) RETURN aktorzy,size((aktorzy)-[:ACTED_IN]->()) AS ilosc_filmow
+
+Zapytanie 7. 
+MATCH (osoba:Person) -[:WROTE]->(film)<-[:DIRECTED]-(osoba:Person) RETURN osoba,film
+
+Zapytanie 8. 
+MATCH (KR:Person {name: "Keanu Reeves"}) -[:ACTED_IN]->(film)<-[:ACTED_IN]-(HW:Person{name: "Hugo Weaving"}) RETURN film

@@ -1,0 +1,30 @@
+>>> print(respons);
+<Response [204]>
+>>> print(respons.text);
+
+>>> respons = requests.put(url, doc_1);
+>>> print(respons.text);
+
+>>> respons.text;
+''
+>>> get_respons = requests.get(url);
+>>> get_respons.text
+'name=one&import=1'
+
+Modyfikacja
+
+>>> _
+<Response [204]>
+>>> mod_respons.text
+'name=one&import=0'
+>>> 
+
+Usuniecie i pobranie
+
+>>> requests.delete(url);
+<Response [204]>
+>>> del_respons = requests.get(url);
+>>> del_respons.text;
+'not found\n'
+>>> print(del_respons);
+<Response [404]>

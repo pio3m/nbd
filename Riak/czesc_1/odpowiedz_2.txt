@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvrdaEucEEUpkzmNlUN7ufosvCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s23786>; rel="up"
+Last-Modified: Wed, 23 Jun 2021 13:46:11 GMT
+ETag: "42W2SbA7oPMJTtTKSmyhe9"
+Date: Wed, 23 Jun 2021 14:09:02 GMT
+Content-Type: application/json
+Content-Length: 95
+Content-Encoding: gzip
+
+{ "language": "scala", "like": 1, "years": 0, "score": 3.0, "desc": "lepsza wersja javy"
+}
